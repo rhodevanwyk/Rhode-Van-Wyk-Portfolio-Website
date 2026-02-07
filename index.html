@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhode Van Wyk - Portfolio</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@200;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+</head>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("whatsappForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById("fullName").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            const msg = `
+Hi, I'm from your portfolio website!
+
+Name: ${name}
+Email: ${email}
+
+Message:
+${message}
+        `;
+
+            window.open(
+                `https://wa.me/27768519561?text=${encodeURIComponent(msg)}`,
+                "_blank"
+            );
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const whatsappBtn = document.getElementById("whatsappBtn");
+
+        whatsappBtn.addEventListener("click", function () {
+            const msg = "Hiii! I just saw your portfolio and I'd love to chat about a project.";
+
+            window.open(
+                `https://wa.me/27768519561?text=${encodeURIComponent(msg)}`,
+                "_blank"
+            );
+        });
+    });
+</script>
+
+
+<body class="bg-[#0D0D0D] text-[#E4E0E1] overflow-x-hidden font-manrope font-light">
+
+    <button id="theme-toggle" onclick="toggleThemes()" class="fixed bottom-10 right-10 z-[100] hidden md:block 
+    bg-[#EAFF00] text-[#0D0D0D] font-anton text-lg px-6 py-3 rounded-full uppercase
+    border-4 border-[#0D0D0D]
+    shadow-[8px_8px_0px_0px_#0D0D0D] 
+    transition-all duration-200
+    hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px]
+    active:scale-95">
+        Switch Design
+    </button>
+
+    <div id="design-original" class="hidden md:block">
+        <aside class="fixed left-0 top-0 h-full w-[66px] bg-[#00FFFF] flex items-center justify-center z-50">
+            <h2 class="uppercase font-anton text-[#0D0D0D] -rotate-90 whitespace-nowrap text-3xl">UI/UX Web Designer
+            </h2>
+        </aside>
+
+        <aside
+            class="fixed right-0 top-0 h-full w-[66px] bg-[#FF00FF] text-[#0D0D0D] flex flex-col items-center justify-center gap-24 z-50">
+            <div class="w-[55px] h-[55px] rounded-full"><a href="https://github.com/rhodevanwyk"><img
+                        src="assets/git-logo.svg"></a></div>
+            <div class="w-[55px] h-[55px] rounded-full"><a
+                    href="https://www.linkedin.com/in/rhod%C3%A9-van-wyk-87b671370"><img src="assets/link-logo.svg"></a>
+            </div>
+            <div class="w-[55px] h-[55px] rounded-full"><a
+                    href="https://www.instagram.com/rhhoooddddeeeee/?__pwa=1"><img src="assets/insta-logo.svg"></a>
+            </div>
+            <div class="w-[55px] h-[55px] rounded-full"><img src="assets/sa-flag.svg"></div>
+
+
+        </aside>
+
+        <main class="mx-12 min-h-screen flex flex-col">
+            <nav class="sticky top-0 z-40 flex w-full font-anton text-sm md:text-base uppercase">
+                <a href="#home"
+                    class="flex-1 py-3 text-center hover:text-[#FF00FF] text-3xl bg-[#E4E0E1] text-[#0D0D0D]">Home</a>
+                <a href="#projects"
+                    class="flex-1 py-3 text-center hover:text-[#00FFFF] text-3xl bg-[#0D0D0D] text-[#E4E0E1]">My
+                    Projects</a>
+                <a href="#about"
+                    class="flex-1 py-3 text-center hover:text-[#FF00FF] text-3xl bg-[#E4E0E1] text-[#0D0D0D]">About
+                    Me</a>
+                <a href="#skills"
+                    class="flex-1 py-3 text-center hover:text-[#00FFFF] text-3xl bg-[#0D0D0D] text-[#E4E0E1]">Skills</a>
+            </nav>
+
+            <section id="home" class="bg-[#0D0D0D] h-[90vh]">
+                <div class="aspect-square p-4 items-center justify-center">
+                    <img src="assets/hero-section-logos.png" alt="Rhode" class="max-w-full h-[788px] mr-auto ml-auto">
+                </div>
+            </section>
+
+            <div class="flex w-full h-[13px]">
+                <div class="flex-1 bg-[#FF00FF]"></div>
+                <div class="flex-1 bg-[#00FFFF]"></div>
+            </div>
+
+            <section id="projects" class="relative w-full h-[100vh] overflow-hidden">
+                <div class="absolute inset-0 grid grid-cols-4 grid-rows-2 h-full w-full">
+                    <div class="bg-[#0D0D0D]"><img src="#" class="w-full h-full"></div>
+                    <div class="bg-[#E4E0E1]"></div>
+                    <div class="bg-[#0D0D0D]"></div>
+                    <div class="bg-[#E4E0E1]"><img src="#" class="w-full h-full"></div>
+                    <div class="bg-[#E4E0E1]"><img src="#" class="w-full h-full"></div>
+                    <div class="bg-[#0D0D0D]"></div>
+                    <div class="bg-[#E4E0E1]"></div>
+                    <div class="bg-[#0D0D0D]"><img src="#" class="w-full h-full"></div>
+                </div>
+                <div
+                    class="relative z-10 h-full w-full flex flex-col items-center justify-center pt-10 mix-blend-difference pointer-events-none">
+                    <img src="assets/projects2.png" alt="My Projects" class="w-[888px] ml-[33px] object-contain">
+                </div>
+            </section>
+
+            <div class="flex w-full h-[13px]">
+                <div class="flex-1 bg-[#FF00FF]"></div>
+                <div class="flex-1 bg-[#00FFFF]"></div>
+            </div>
+
+            <section id="about" class="flex flex-col md:flex-row min-h-[500px]">
+                <div class="w-full md:w-1/2 bg-[#E4E0E1] flex items-center justify-center p-12">
+                    <img src="assets/aboutme.png" alt="About Me" class="w-full max-w-4xl">
+                </div>
+                <div class="w-full md:w-1/2 bg-[#0D0D0D] flex items-center justify-center p-10 md:p-20">
+                    <img src="assets/aboutme-info.png" alt="About Me Info" class="w-full max-w-4xl">
+                </div>
+            </section>
+
+            <div class="flex w-full h-[13px]">
+                <div class="flex-1 bg-[#FF00FF]"></div>
+                <div class="flex-1 bg-[#00FFFF]"></div>
+            </div>
+
+            <section id="skills" class="flex flex-col md:flex-row min-h-[500px]">
+                <div class="w-full md:w-1/2 bg-[#0D0D0D] flex items-center justify-center p-12">
+                    <img src="assets/skills-list-icons.png" alt="Skills List" class="w-full max-w-4xl">
+                </div>
+                <div class="w-full md:w-1/2 bg-[#E4E0E1] flex items-center justify-center p-10 md:p-20">
+                    <img src="assets/skills.png" alt="Skills" class="w-[150%] max-w-4xl">
+                </div>
+            </section>
+
+            <div class="flex w-full h-[13px]">
+                <div class="flex-1 bg-[#FF00FF]"></div>
+                <div class="flex-1 bg-[#00FFFF]"></div>
+            </div>
+
+            <section id="resume" class="flex flex-col md:flex-row min-h-[500px]">
+                <div class="w-full md:w-1/2 bg-[#E4E0E1] flex items-center justify-center p-12">
+                    <img src="assets/dnl-my-resume-text.png" alt="My Resume" class="w-full max-w-4xl">
+                </div>
+                <div class="w-full md:w-1/2 bg-[#0D0D0D] flex items-center justify-center p-10 md:p-20">
+                    <a href="rhodevanwyk-resume.pdf" download>
+                        <img src="assets/dnl-btn.png" alt="Download My Resume" class="w-full max-w-4xl cursor-pointer">
+                    </a>
+                </div>
+            </section>
+
+            <div class="flex w-full h-[13px]">
+                <div class="flex-1 bg-[#FF00FF]"></div>
+                <div class="flex-1 bg-[#00FFFF]"></div>
+            </div>
+
+            <section id="contactme" class="flex flex-col md:flex-row min-h-[500px]">
+                <div class="w-full md:w-1/2 bg-[#0D0D0D] flex items-center justify-center p-12">
+                    <img src="assets/contactme-info.png" alt="My Resume" class="w-full max-w-4xl">
+                </div>
+
+                <div class="w-full md:w-1/2 bg-[#0D0D0D] flex items-center justify-center p-10 md:p-20">
+                    <img id="whatsappBtn" src="assets/via-wa-text.png" alt="Via WA"
+                        class="w-full max-w-4xl cursor-pointer">
+                </div>
+            </section>
+
+            <div class="flex w-full h-[13px]">
+                <div class="flex-1 bg-[#FF00FF]"></div>
+                <div class="flex-1 bg-[#00FFFF]"></div>
+            </div>
+
+            <footer class="sticky bottom-0 z-40 flex w-full font-anton md:text-base uppercase">
+                <a href="#resume"
+                    class="flex-1 py-3 bg-[#0D0D0D] text-[#E4E0E1] text-center text-3xl hover:text-[#00FFFF]">My
+                    Resume</a>
+                <a href="#contactme"
+                    class="flex-1 py-3 bg-[#E4E0E1] text-[#0D0D0D] text-center text-3xl hover:text-[#FF00FF]">Contact
+                    Me</a>
+            </footer>
+        </main>
+    </div>
+
+    <div id="design-modern" class="block md:hidden min-h-screen bg-[#050505] p-6 md:p-10 overflow-x-hidden">
+        <main class="max-w-6xl mx-auto">
+            <section
+                class="h-[80vh] md:h-[100vh] w-full flex flex-col items-center justify-center md:mt-[-50px] mb-[33px]">
+                <div class="text-left w-full md:w-auto">
+                    <h2 class="text-6xl md:text-7xl font-anton uppercase leading-[0.8] mb-4 md:mb-16">
+                        <img src="assets/rhodelogo.png" alt="Logo"
+                            class="w-[180px] md:w-[222px] h-auto mb-[-60px] md:mb-[-99px]"><br>
+                        <span class="text-transparent bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] bg-clip-text"
+                            style="-webkit-text-stroke: 1.5px transparent; -webkit-background-clip: text;">
+                            VAN WYK
+                        </span>
+                    </h2>
+                    <h1 class="text-[12vw] md:text-[10vw] font-anton leading-none text-[#E4E0E1]/10 uppercase">
+                        UI/UX WEB<br>DESIGNER
+                    </h1>
+                </div>
+            </section>
+
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mb-20">
+                <div class="rounded-[2rem] p-[3px] bg-gradient-to-br from-[#00FFFF] to-[#FF00FF]">
+                    <div class="bg-[#0D0D0D]/95 rounded-[calc(2rem-1px)] p-8 md:p-[39px] h-full">
+                        <img src="assets/placeholder-img.jpg" class="w-full rounded-xl mb-6">
+                        <h3 class="font-anton text-3xl uppercase mt-16">My Projects</h3>
+                        <p class="text-gray-400 mt-2 font-manrope text-lg opacity-70">Webistes / Web Apps created by me.
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-[#E4E0E1] border-[3px] border-[#E4E0E1] rounded-[2rem] p-[2rem] p-8 md:p-10 text-[#0D0D0D] flex flex-col justify-between">
+                    <img src="assets/aboutme.png" class="h-auto w-full max-w-[333px] mt-4">
+                    <p class="text-lg md:text-2xl font-manrope font-extralight leading-tight">I’m a <span
+                            class="font-bold">Front-End Developer & UI/UX Designer</span> who builds websites that look
+                        clean, work fast, and feel intuitive. I focus on modern, minimalistic layouts but I also like to
+                        experiment with bold, <span class="font-bold">out-of-the-box</span> designs. My goal is to
+                        create interfaces that people actually want to use.</p>
+
+                </div>
+
+                <div class="bg-[#E4E0E1]/5 rounded-[2rem] p-8 md:p-12 border-[3px] border-[#E4E0E1]/10 flex flex-col">
+
+                    <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-6 mb-auto">
+
+                        <div class="flex flex-col items-center gap-3">
+                            <div
+                                class="skill-item bg-[#E4E0E1]/5 backdrop-blur-sm aspect-square w-full rounded-[1.5rem] transition-all duration-500 ease-out flex items-center justify-center p-4">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                                    class="w-full h-full object-contain invert brightness-[200%]" alt="github">
+                            </div>
+                            <span
+                                class="font-['Manrope'] font-light text-[10px] uppercase tracking-[0.2em] text-[#E4E0E1]/50">Github</span>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-3">
+                            <div
+                                class="skill-item bg-[#E4E0E1]/5 backdrop-blur-sm aspect-square w-full rounded-[1.5rem] transition-all duration-500 ease-out flex items-center justify-center p-4">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                                    class="w-full h-full object-contain" alt="figma">
+                            </div>
+                            <span
+                                class="font-['Manrope'] font-light text-[10px] uppercase tracking-[0.2em] text-[#E4E0E1]/50">Figma</span>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-3">
+                            <div
+                                class="skill-item bg-[#E4E0E1]/5 backdrop-blur-sm aspect-square w-full rounded-[1.5rem] transition-all duration-500 ease-out flex items-center justify-center p-4">
+                                <img src="https://www.vectorlogo.zone/logos/canva/canva-icon.svg"
+                                    class="w-full h-full object-contain" alt="canva">
+                            </div>
+                            <span
+                                class="font-['Manrope'] font-light text-[10px] uppercase tracking-[0.2em] text-[#E4E0E1]/50">Canva</span>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-3">
+                            <div
+                                class="skill-item bg-[#E4E0E1]/5 backdrop-blur-sm aspect-square w-full rounded-[1.5rem] transition-all duration-500 ease-out flex items-center justify-center p-4">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                    class="w-full h-full object-contain" alt="react">
+                            </div>
+                            <span
+                                class="font-['Manrope'] font-light text-[10px] uppercase tracking-[0.2em] text-[#E4E0E1]/50">React</span>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-3">
+                            <div
+                                class="skill-item bg-[#E4E0E1]/5 backdrop-blur-sm aspect-square w-full rounded-[1.5rem] transition-all duration-500 ease-out flex items-center justify-center p-4">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg"
+                                    class="w-full h-full object-contain" alt="vite">
+                            </div>
+                            <span
+                                class="font-['Manrope'] font-light text-[10px] uppercase tracking-[0.2em] text-[#E4E0E1]/50">Vite</span>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-3">
+                            <div
+                                class="skill-item bg-[#E4E0E1]/5 backdrop-blur-sm aspect-square w-full rounded-[1.5rem] transition-all duration-500 ease-out flex items-center justify-center p-4">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                    class="w-full h-full object-contain" alt="html5">
+                            </div>
+                            <span
+                                class="font-['Manrope'] font-light text-[10px] uppercase tracking-[0.2em] text-[#E4E0E1]/50">HTML5</span>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-3">
+                            <div
+                                class="skill-item bg-[#E4E0E1]/5 backdrop-blur-sm aspect-square w-full rounded-[1.5rem] transition-all duration-500 ease-out flex items-center justify-center p-4">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                    class="w-full h-full object-contain" alt="css3">
+                            </div>
+                            <span
+                                class="font-['Manrope'] font-light text-[10px] uppercase tracking-[0.2em] text-[#E4E0E1]/50">CSS3</span>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-3">
+                            <div
+                                class="skill-item bg-[#E4E0E1]/5 backdrop-blur-sm aspect-square w-full rounded-[1.5rem] transition-all duration-500 ease-out flex items-center justify-center p-4">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                    class="w-full h-full object-contain" alt="javascript">
+                            </div>
+                            <span
+                                class="font-['Manrope'] font-light text-[10px] uppercase tracking-[0.2em] text-[#E4E0E1]/50">Javascript</span>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-3">
+                            <div
+                                class="skill-item bg-[#E4E0E1]/5 backdrop-blur-sm aspect-square w-full rounded-[1.5rem] transition-all duration-500 ease-out flex items-center justify-center p-4">
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg"
+                                    class="w-full h-full object-contain" alt="tailwindcss">
+                            </div>
+                            <span
+                                class="font-['Manrope'] font-light text-[10px] uppercase tracking-[0.2em] text-[#E4E0E1]/50">Tailwind</span>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-3">
+                            <div
+                                class="skill-item bg-[#E4E0E1]/5 backdrop-blur-sm aspect-square w-full rounded-[1.5rem] transition-all duration-500 ease-out flex items-center justify-center p-4">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                                    class="w-full h-full object-contain" alt="bootstrap">
+                            </div>
+                            <span
+                                class="font-['Manrope'] font-light text-[10px] uppercase tracking-[0.2em] text-[#E4E0E1]/50">Bootstrap</span>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-3">
+                            <div
+                                class="skill-item bg-[#E4E0E1]/5 backdrop-blur-sm aspect-square w-full rounded-[1.5rem] transition-all duration-500 ease-out flex items-center justify-center p-4">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                                    class="w-full h-full object-contain" alt="node.js">
+                            </div>
+                            <span
+                                class="font-['Manrope'] font-light text-[10px] uppercase tracking-[0.2em] text-[#E4E0E1]/50">Node.js</span>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-3">
+                            <div
+                                class="skill-item bg-[#E4E0E1]/5 backdrop-blur-sm aspect-square w-full rounded-[1.5rem] transition-all duration-500 ease-out flex items-center justify-center p-4">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                                    class="w-full h-full object-contain" alt="vscode">
+                            </div>
+                            <span
+                                class="font-['Manrope'] font-light text-[10px] uppercase tracking-[0.2em] text-[#E4E0E1]/50">VS
+                                Code</span>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-3">
+                            <div
+                                class="skill-item bg-[#E4E0E1]/5 backdrop-blur-sm aspect-square w-full rounded-[1.5rem] transition-all duration-500 ease-out flex items-center justify-center p-4">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gimp/gimp-original.svg"
+                                    class="w-full h-full object-contain" alt="gimp">
+                            </div>
+                            <span
+                                class="font-['Manrope'] font-light text-[10px] uppercase tracking-[0.2em] text-[#E4E0E1]/50">GIMP</span>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-3">
+                            <div
+                                class="skill-item bg-[#E4E0E1]/5 backdrop-blur-sm aspect-square w-full rounded-[1.5rem] transition-all duration-500 ease-out flex items-center justify-center p-4">
+                                <img src="https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg"
+                                    class="w-full h-full object-contain" alt="netlify">
+                            </div>
+                            <span
+                                class="font-['Manrope'] font-light text-[10px] uppercase tracking-[0.2em] text-[#E4E0E1]/50">Netlify</span>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-3">
+                            <div
+                                class="skill-item bg-[#E4E0E1]/5 backdrop-blur-sm aspect-square w-full rounded-[1.5rem] transition-all duration-500 ease-out flex items-center justify-center p-4">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                                    class="w-full h-full object-contain" alt="php">
+                            </div>
+                            <span
+                                class="font-['Manrope'] font-light text-[10px] uppercase tracking-[0.2em] text-[#E4E0E1]/50">PHP</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-16">
+                        <h3 class="font-anton text-3xl uppercase text-white tracking-tighter">Skills</h3>
+                        <p class="text-gray-400 mt-2 font-manrope text-lg opacity-70">Stuff I can use</p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-[#E4E0E1]/5 rounded-[2rem] p-8 md:p-10 border-[3px] border-[#E4E0E1]/10 backdrop-blur-sm flex flex-col h-full">
+                    <div
+                        class="hidden md:block w-full flex-grow overflow-hidden rounded-xl mb-6 border border-[#E4E0E1]/10 bg-black/20">
+                        <iframe src="rhodevanwyk-resume.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH"
+                            class="w-full h-full min-h-[400px]" style="border: none;">
+                            <p>Your browser does not support iframes. <a href="rhodevanwyk-resume.pdf">Click here to
+                                    view the PDF.</a></p>
+                        </iframe>
+                    </div>
+
+                    <div class="flex justify-between items-end mt-auto">
+                        <div>
+                            <h3 class="font-anton text-3xl uppercase text-[#E4E0E1]">My Resume</h3>
+                            <p class="text-gray-400 mt-1 font-manrope text-lg opacity-70">Updated: February 2026</p>
+                        </div>
+
+                        <a href="rhodevanwyk-resume.pdf" download
+                            class="inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-[#E4E0E1] text-[#0D0D0D] rounded-full border-4 border-[#0D0D0D] hover:bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] transition-all duration-500 active:scale-95 shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:col-span-2 h-[3px] w-full bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] my-6"></div>
+
+                <div
+                    class="bg-[#E4E0E1]/5 rounded-[2rem] border-[3px] border-[#E4E0E1]/10 md:col-span-2 overflow-hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+
+                        <div class="p-8 md:p-12 flex flex-col justify-between">
+                            <div>
+                                <h3 class="font-anton text-4xl md:text-5xl mb-4">
+                                    <img src="assets/emoji.png" alt="Emoji"
+                                        class="w-[222px] h-auto ml-[-55px] mb-[-66px]"><br>
+                                    <span
+                                        class="mt-4 text-transparent uppercase bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] bg-clip-text">Contact
+                                        Me</span>
+                                </h3>
+                                <p class="text-gray-400 font-manrope text-lg max-w-sm">
+                                    Have a project in mind or just want to say hi? My inbox is always open.
+                                </p>
+                            </div>
+
+                            <div class="mt-10 space-y-2 font-manrope">
+                                <p class="text-sm uppercase tracking-widest text-gray-500 font-bold">Based In</p>
+                                <p class="text-xl">South Africa, Gauteng, Pretoria-East / Worldwide</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-[#E4E0E1]/5 p-8 md:p-12 border-t md:border-t-0 border-[#E4E0E1]/10">
+                            <form id="whatsappForm" class="space-y-6">
+                                <div>
+                                    <label
+                                        class="block font-anton uppercase text-lg tracking-widest text-[#00FFFF] mb-2">Full
+                                        Name</label>
+                                    <input id="fullName" type="text" required placeholder="Name Surname"
+                                        class="w-full bg-transparent border-b border-[#E4E0E1]/20 py-3 outline-none focus:border-[#FF00FF] transition-colors font-manrope">
+                                </div>
+                                <div>
+                                    <label
+                                        class="block font-anton uppercase text-lg tracking-widest text-[#00FFFF] mb-2">Email
+                                        Address</label>
+                                    <input id="email" type="email" required placeholder="name@example.com"
+                                        class="w-full bg-transparent border-b border-[#E4E0E1]/20 py-3 outline-none focus:border-[#FF00FF] transition-colors font-manrope">
+                                </div>
+                                <div>
+                                    <label
+                                        class="block font-anton uppercase text-lg tracking-widest text-[#00FFFF] mb-2">Message</label>
+                                    <textarea id="message" rows="3" required placeholder="Tell me about your project..."
+                                        class="w-full bg-transparent border-b border-[#E4E0E1]/20 py-3 outline-none focus:border-[#FF00FF] transition-colors font-manrope resize-none"></textarea>
+                                </div>
+                                <button type="submit"
+                                    class="w-full mt-4 flex items-center justify-center gap-3 bg-[#25D366] text-white font-anton uppercase py-4 rounded-xl transition-all duration-300 hover:bg-white hover:text-[#25D366] active:scale-95 text-lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="w-6 h-6 transition-colors duration-300">
+                                        <path
+                                            d="M12.04 2C6.58 2 2.11 6.47 2.11 11.93c0 2.1.55 4.15 1.6 5.97L2 22l4.22-1.6a9.9 9.9 0 005.82 1.87h.01c5.46 0 9.93-4.47 9.93-9.93S17.5 2 12.04 2zm0 18.07a8.2 8.2 0 01-4.18-1.14l-.3-.18-2.5.95.95-2.44-.2-.31a8.22 8.22 0 0112.7-10.2 8.2 8.2 0 01-6.47 13.32zm4.52-6.2c-.25-.13-1.47-.72-1.7-.8-.23-.08-.4-.13-.57.13-.17.25-.65.8-.8.97-.15.17-.3.19-.55.06-.25-.13-1.05-.39-2-1.24-.74-.66-1.24-1.48-1.38-1.73-.14-.25-.02-.39.11-.52.11-.11.25-.3.38-.45.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.57-1.38-.78-1.9-.2-.48-.4-.41-.57-.42h-.48c-.17 0-.45.06-.68.32-.23.25-.9.88-.9 2.15 0 1.27.92 2.5 1.05 2.67.13.17 1.8 2.75 4.37 3.85.61.26 1.08.42 1.45.54.61.19 1.17.16 1.61.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.3z" />
+                                    </svg>
+                                    Send via WhatsApp
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="mt-20 mb-10">
+                <div class="rounded-[2rem] p-[3px] bg-gradient-to-r from-[#00FFFF] via-[#FF00FF] to-[#00FFFF]">
+                    <div
+                        class="bg-[#050505] rounded-[calc(2rem-1px)] p-8 flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div class="flex flex-col items-center md:items-start">
+                            <img src="assets/rhodelogo.png" alt="Logo" class="w-24 mb-2">
+                            <p class="text-gray-500 font-manrope text-sm">© 2026 Rhode Van Wyk. All rights reserved.</p>
+                        </div>
+                        <div class="flex gap-8 font-anton uppercase text-xl">
+                            <a href="https://github.com/rhodevanwyk"><img src="assets/git-logo.svg"></a>
+                            <a href="https://www.linkedin.com/in/rhod%C3%A9-van-wyk-87b671370"><img
+                                    src="assets/link-logo.svg"></a>
+                            <a href="https://www.instagram.com/rhhoooddddeeeee/?__pwa=1"><img
+                                    src="assets/insta-logo.svg"></a>
+                        </div>
+                        <div class="text-center md:text-right">
+                            <p class="font-anton text-lg"><img src="assets/sa-flag.svg"></p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+</body>
+
+</html>
