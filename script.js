@@ -4,6 +4,9 @@ tailwind.config = {
             fontFamily: {
                 anton: ['Anton', 'sans-serif'],
                 manrope: ['Manrope', 'sans-serif'],
+            },
+            colors: {
+                'brand-green': '#25D366',
             }
         }
     }
@@ -61,3 +64,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+function sendToWhatsApp() {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !message) {
+        alert("Please fill in all fields.");
+        return;
+    }
+
+    const phoneNumber = "27768519561"; 
+    const baseText = `Hi, I'm from your portfolio website!\n` +
+                     `\n` +
+                     `Name: ${name}\n` +
+                     `Email: ${email}\n` +
+                     `Message: ${message}`;
+
+    const encodedText = encodeURIComponent(baseText);
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedText}`;
+
+    window.open(whatsappUrl, '_blank').focus();
+}
