@@ -114,29 +114,30 @@
         </div>
     </section>
 
-    <section id="projects" class="bg-black py-24 px-8">
-        <div class="max-w-[1600px] mx-auto overflow-hidden">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
-                <h2 class="font-black text-white text-5xl md:text-[96px] uppercase">My Projects</h2>
-                <button
-                    class="btn-premium bg-brandPurple text-black px-10 py-4 rounded-full font-bold text-xl md:text-[48px] w-full md:w-[500px] h-auto md:h-[111px] uppercase transition-all duration-500">
-                    See More...
-                </button>
-            </div>
+<section id="projects" class="bg-black py-24 px-8">
+    <div class="max-w-[1600px] mx-auto overflow-hidden pt-2 pb-2">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
+            <h2 class="font-black text-white text-5xl md:text-[96px] uppercase">My Projects</h2>
+            
+            <button
+                class="btn-premium bg-brandPurple text-black px-10 h-auto py-6 md:h-[111px] md:py-0 rounded-full font-bold text-xl md:text-[48px] w-full md:w-[500px] uppercase transition-all duration-500 flex items-center justify-center">
+                See More...
+            </button>
+        </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[40px] md:gap-[50px]">
-                <div class="aspect-[4/5] bg-white rounded-[40px] md:rounded-pill-box overflow-hidden">
-                    <img src="assets/project1.jpg" alt="Project 1" class="w-full h-full object-cover">
-                </div>
-                <div class="aspect-[4/5] bg-white rounded-[40px] md:rounded-pill-box overflow-hidden">
-                    <img src="assets/project2.jpg" alt="Project 2" class="w-full h-full object-cover">
-                </div>
-                <div class="aspect-[4/5] bg-white rounded-[40px] md:rounded-pill-box overflow-hidden">
-                    <img src="assets/project3.jpg" alt="Project 3" class="w-full h-full object-cover">
-                </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[40px] md:gap-[50px]">
+            <div class="aspect-[4/5] bg-white rounded-[40px] md:rounded-pill-box overflow-hidden">
+                <img src="assets/project1.jpg" alt="Project 1" class="w-full h-full object-cover">
+            </div>
+            <div class="aspect-[4/5] bg-white rounded-[40px] md:rounded-pill-box overflow-hidden">
+                <img src="assets/project2.jpg" alt="Project 2" class="w-full h-full object-cover">
+            </div>
+            <div class="aspect-[4/5] bg-white rounded-[40px] md:rounded-pill-box overflow-hidden">
+                <img src="assets/project3.jpg" alt="Project 3" class="w-full h-full object-cover">
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section class="bg-white py-24 px-8 overflow-hidden">
         <div class="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0">
@@ -176,25 +177,47 @@
         </div>
     </section>
 
-    <section id="contact"
-        class="bg-white py-32 px-8 md:px-[80px] grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 overflow-hidden">
-        <div>
-            <h2 class="font-black text-6xl md:text-[96px] uppercase leading-none mb-10">Contact<br>Me</h2>
-            <p class="text-2xl md:text-[33px] text-black">My inbox is always open.</p>
+    <section id="contact" class="bg-black py-24 px-4 md:px-8 overflow-hidden">
+        <div
+            class="max-w-[1600px] mx-auto bg-white rounded-[50px] md:rounded-pill-box p-12 md:p-[80px] grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+            <div>
+                <h2 class="font-black text-6xl md:text-[96px] uppercase leading-none mb-10 text-black">Contact<br>Me
+                </h2>
+                <p class="text-2xl md:text-[33px] text-black">
+                    Have a project in mind or just want to say hi? My inbox is <b>always</b> open.
+                </p>
+            </div>
+
+            <form class="space-y-6" onsubmit="event.preventDefault(); sendToWhatsApp();">
+
+                <div class="flex flex-col gap-2">
+                    <label class="font-black text-2xl md:text-[33px] uppercase text-black">Full Name</label>
+                    <input id="name" type="text" placeholder="Name Surname"
+                        class="w-full bg-black p-6 text-xl text-white font-bold outline-none border-none placeholder:opacity-30"
+                        required>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <label class="font-black text-2xl md:text-[33px] uppercase text-black">Email</label>
+                    <input id="email" type="email" placeholder="name@example.com"
+                        class="w-full bg-black p-6 text-xl text-white font-bold outline-none border-none placeholder:opacity-30"
+                        required>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <label class="font-black text-2xl md:text-[33px] uppercase text-black">Message</label>
+                    <textarea id="message" rows="4" placeholder="Tell me all about your project here..."
+                        class="w-full bg-black p-6 text-xl text-white font-bold resize-none outline-none border-none placeholder:opacity-30"
+                        required></textarea>
+                </div>
+
+                <button type="submit"
+                    class="btn-premium w-full bg-brandPurple text-black px-10 h-auto py-6 md:h-[111px] md:py-0 rounded-full font-black text-2xl md:text-[48px] uppercase transition-all duration-500 mt-4 flex items-center justify-center">
+                    Send
+                </button>
+            </form>
         </div>
-        <form class="space-y-8" onsubmit="event.preventDefault(); sendToWhatsApp();">
-            <input id="name" type="text" placeholder="FULL NAME"
-                class="w-full bg-black p-6 text-xl text-white font-black outline-none border-none" required>
-            <input id="email" type="email" placeholder="EMAIL ADDRESS"
-                class="w-full bg-black p-6 text-xl text-white font-black outline-none border-none" required>
-            <textarea id="message" rows="5" placeholder="YOUR MESSAGE"
-                class="w-full bg-black p-6 text-xl text-white font-black resize-none outline-none border-none"
-                required></textarea>
-            <button type="submit"
-                class="btn-premium w-full bg-brandPurple text-black px-10 py-4 rounded-full font-bold text-xl md:text-[48px] h-auto md:h-[111px] uppercase transition-all duration-500">
-                Send Message
-            </button>
-        </form>
     </section>
 
     <footer class="bg-black text-white py-32 flex flex-col items-center gap-12 text-center overflow-hidden">
