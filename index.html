@@ -46,6 +46,21 @@
         }
     </script>
     <style>
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        section {
+            border: none !important;
+            outline: none !important;
+        }
+
         .glass-nav {
             background: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(12px);
@@ -56,13 +71,18 @@
             will-change: transform, filter;
             backface-visibility: hidden;
         }
+
+        .nav-link {
+            display: inline-block;
+            will-change: transform;
+        }
     </style>
 </head>
 
 <body class="bg-black font-sans antialiased text-black">
 
     <nav class="glass-nav fixed top-0 w-full z-50 text-white px-8 md:px-[64px] py-6 flex justify-between items-center">
-        <img src="assets - modern design\Rhode-Logo.png" class="w-[111px] h-[auto]">
+        <img src="assets - modern design\Rhode-Logo.png" class="w-[80px] md:w-[111px] h-auto">
         <ul class="hidden lg:flex gap-16 text-[33px] font-black uppercase font-sans">
             <li><a href="#home" class="nav-link transition-all duration-300 hover:text-brandPurple">Home</a></li>
             <li><a href="#projects" class="nav-link transition-all duration-300 hover:text-brandPurple">Projects</a>
@@ -72,123 +92,125 @@
             <li><a href="#resume" class="nav-link transition-all duration-300 hover:text-brandPurple">Resume</a></li>
             <li><a href="#contact" class="nav-link transition-all duration-300 hover:text-brandPurple">Contact</a></li>
         </ul>
-        <a href="https://github.com/rhodevanwyk"><i class="fab fa-github text-[80px]"></i></a>
+        <a href="https://github.com/rhodevanwyk" class="hidden md:block"><i
+                class="fab fa-github text-[40px] md:text-[80px]"></i></a>
     </nav>
 
     <section id="home"
-        class="relative h-[85vh] mt-[15vh] w-[95%] ml-[auto] mr-[auto] bg-white px-8 md:px-[80px] flex items-center overflow-hidden rounded-t-pill-box">
-        <div class="w-full relative z-10 mt-20 mb-20 flex flex-row items-center justify-start gap-[300px]">
+        class="relative h-[85vh] mt-[15vh] w-[95%] mx-auto bg-white px-8 md:px-[80px] flex items-center overflow-hidden rounded-t-[50px] md:rounded-t-pill-box">
+
+        <div class="hidden md:flex w-full relative z-10 flex-row items-center justify-start gap-[100px] lg:gap-[300px]">
             <img src="assets - modern design\Hero-Section-Title.png" alt="Title"
-                class="h-[666px] w-auto object-contain">
-            <img src="assets - modern design\Thing.png" alt="Thing" class="h-[788px] w-auto object-contain">
+                class="h-[500px] lg:h-[666px] w-auto object-contain">
+            <img src="assets - modern design\Thing.png" alt="Thing"
+                class="h-[600px] lg:h-[788px] w-auto object-contain">
+        </div>
+
+        <div class="flex md:hidden flex-col w-full relative z-10">
+            <h1 class="font-black text-[55px] text-black uppercase leading-[0.8] mb-2">UI/UX &
+            </h1>
+            <h2 class="font-black text-[55px] text-black uppercase leading-[0.9]">Frontend Developer
+            </h2>
         </div>
     </section>
 
-    <section id="projects" class="bg-black py-24 px-4 md:px-8">
-        <div class="max-w-[1600px] mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
-                <h2 class="font-black text-white text-[96px] md:text-8xl uppercase">My Projects</h2>
+    <section id="projects" class="bg-black py-24 px-8">
+        <div class="max-w-[1600px] mx-auto overflow-hidden">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
+                <h2 class="font-black text-white text-5xl md:text-[96px] uppercase">My Projects</h2>
                 <button
-                    class="btn-premium bg-brandPurple text-black px-10 py-4 rounded-full font-bold text-[48px] w-[500px] h-[111px] uppercase transition-all duration-500">
+                    class="btn-premium bg-brandPurple text-black px-10 py-4 rounded-full font-bold text-xl md:text-[48px] w-full md:w-[500px] h-auto md:h-[111px] uppercase transition-all duration-500">
                     See More...
                 </button>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[50px]">
-                <div class="aspect-[4/5] bg-white rounded-pill-box overflow-hidden">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[40px] md:gap-[50px]">
+                <div class="aspect-[4/5] bg-white rounded-[40px] md:rounded-pill-box overflow-hidden">
                     <img src="assets/project1.jpg" alt="Project 1" class="w-full h-full object-cover">
                 </div>
-                <div class="aspect-[4/5] bg-white rounded-pill-box overflow-hidden">
+                <div class="aspect-[4/5] bg-white rounded-[40px] md:rounded-pill-box overflow-hidden">
                     <img src="assets/project2.jpg" alt="Project 2" class="w-full h-full object-cover">
                 </div>
-                <div class="aspect-[4/5] bg-white rounded-pill-box overflow-hidden">
+                <div class="aspect-[4/5] bg-white rounded-[40px] md:rounded-pill-box overflow-hidden">
                     <img src="assets/project3.jpg" alt="Project 3" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-white py-24 px-4 md:px-8">
-        <div class="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-2 auto-rows-[minmax(450px,auto)]">
+    <section class="bg-white py-24 px-8 overflow-hidden">
+        <div class="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0">
 
             <div id="about"
-                class="bg-brandPurple rounded-br-none text-white p-12 md:p-[80px] rounded-pill-box flex flex-col justify-center h-[881px]">
-                <h3 class="font-black text-[96px] md:text-[96px] mb-8 uppercase">About Me</h3>
-                <p class="text-[33px] md:text-[33px] leading-[48px] max-w-xl text-white">
-                    I’m a <b>Front-End Developer</b> & <b>UI/UX Designer</b> who builds websites that look clean, work
-                    fast, and feel intuitive.
-                    I focus on modern, minimalistic layouts but I also like to experiment with bold,
-                    <b>out-of-the-box</b>
-                    designs.
-                    My goal is to create interfaces that people actually enjoy seeing.
+                class="bg-brandPurple text-white p-12 md:p-[80px] rounded-[50px] lg:rounded-pill-box lg:rounded-br-none flex flex-col justify-center min-h-[450px] lg:h-[881px]">
+                <h3 class="font-black text-5xl md:text-[96px] mb-8 uppercase leading-none">About Me</h3>
+                <p class="text-2xl md:text-[33px] leading-tight md:leading-[48px] max-w-xl text-white">
+                    I’m a <b>Front-End Developer</b> & <b>UI/UX Designer</b> who builds clean, fast, and intuitive
+                    websites.
                 </p>
             </div>
 
             <div id="skills"
-                class="rounded-bl-none bg-black text-white p-12 md:p-[80px] rounded-pill-box flex flex-col justify-center">
-                <h3 class="font-black text-[96px] md:text-[96px] mb-12 uppercase">Skills</h3>
-                <div class="w-[auto] h-[420px]">
-                    <img src="assets - modern design\Skills-Icons.png" alt="Skills Icons">
+                class="bg-black text-white p-12 md:p-[80px] rounded-[50px] lg:rounded-pill-box lg:rounded-bl-none flex flex-col justify-center min-h-[450px]">
+                <h3 class="font-black text-5xl md:text-[96px] mb-12 uppercase leading-none">Skills</h3>
+                <div class="w-full">
+                    <img src="assets - modern design\Skills-Icons.png" alt="Skills Icons"
+                        class="max-w-full h-auto object-contain">
                 </div>
             </div>
 
             <div id="resume"
-                class="bg-black rounded-tr-none text-white p-12 md:p-[80px] rounded-pill-box flex flex-col justify-between h-[881px]">
+                class="bg-black text-white p-12 md:p-[80px] rounded-[50px] lg:rounded-pill-box lg:rounded-tr-none flex flex-col justify-between min-h-[450px] lg:h-[881px]">
                 <div>
-                    <h3 class="font-black text-[96px] md:text-[96px] mb-2 uppercase text-white">My Resume</h3>
-                    <p class="text-white opacity-[33%] text-[33px]">Available for freelance & full-time work.</p>
+                    <h3 class="font-black text-5xl md:text-[96px] mb-4 uppercase text-white leading-none">My Resume</h3>
+                    <p class="text-white opacity-40 text-xl md:text-[33px]">Available for freelance & full-time work.
+                    </p>
                 </div>
 
                 <a href="rhodevanwyk-resume.pdf" download="Rhode_Van_Wyk_Resume.pdf"
-                    class="btn-premium mt-12 bg-white text-black px-10 py-4 rounded-full font-bold text-[48px] w-[500px] h-[111px] uppercase flex items-center justify-center ml-[auto] mr-[auto] transition-all duration-500">
+                    class="btn-premium mt-12 bg-white text-black px-8 py-6 rounded-full font-bold text-xl md:text-[48px] w-full lg:w-[500px] lg:h-[111px] uppercase flex items-center justify-center transition-all duration-500 ml-[auto] mr-[auto]">
                     Download PDF
                 </a>
             </div>
-            <img src="assets - modern design\Pattern.png" alt="Pattern" class="w-[800px]">
-
         </div>
     </section>
 
-    <section id="contact" class="bg-white py-32 px-8 md:px-[80px] grid grid-cols-1 lg:grid-cols-2 gap-24">
+    <section id="contact"
+        class="bg-white py-32 px-8 md:px-[80px] grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 overflow-hidden">
         <div>
-            <h2 class="font-black text-[96px] md:text-[96px] uppercase leading-none mb-10">Contact<br>Me</h2>
-            <p class="text-[33px] text-black">
-                Have a project in mind or just want to say hi? My inbox is always open.
-            </p>
+            <h2 class="font-black text-6xl md:text-[96px] uppercase leading-none mb-10">Contact<br>Me</h2>
+            <p class="text-2xl md:text-[33px] text-black">My inbox is always open.</p>
         </div>
         <form class="space-y-8" onsubmit="event.preventDefault(); sendToWhatsApp();">
-            <input id="name" type="text" placeholder="FULL NAME" class="w-full bg-black p-6 text-2xl text-white font-black placeholder:text-gray-500
-                outline-none border-none ring-0 focus:ring-[3px] focus:ring-brandPurple 
-                transition-all duration-200" required>
-
-            <input id="email" type="email" placeholder="EMAIL ADDRESS" class="w-full bg-black p-6 text-2xl text-white font-black placeholder:text-gray-500
-                outline-none border-none ring-0 focus:ring-[3px] focus:ring-brandPurple 
-                transition-all duration-200" required>
-
-            <textarea id="message" rows="5" placeholder="YOUR MESSAGE" class="w-full bg-black p-6 text-2xl text-white font-black placeholder:text-gray-500 resize-none
-                outline-none border-none ring-0 focus:ring-[3px] focus:ring-brandPurple 
-                transition-all duration-200" required></textarea>
-
+            <input id="name" type="text" placeholder="FULL NAME"
+                class="w-full bg-black p-6 text-xl text-white font-black outline-none border-none" required>
+            <input id="email" type="email" placeholder="EMAIL ADDRESS"
+                class="w-full bg-black p-6 text-xl text-white font-black outline-none border-none" required>
+            <textarea id="message" rows="5" placeholder="YOUR MESSAGE"
+                class="w-full bg-black p-6 text-xl text-white font-black resize-none outline-none border-none"
+                required></textarea>
             <button type="submit"
-                class="btn-premium w-full bg-brandPurple text-black px-10 py-4 rounded-full font-bold text-[48px] h-[111px] uppercase transition-all duration-500">
+                class="btn-premium w-full bg-brandPurple text-black px-10 py-4 rounded-full font-bold text-xl md:text-[48px] h-auto md:h-[111px] uppercase transition-all duration-500">
                 Send Message
             </button>
         </form>
     </section>
 
-    <footer class="bg-black text-white py-32 flex flex-col items-center gap-12 overflow-hidden">
-        <img src="assets - modern design\Rhode-Logo.png" alt="Rhode Logo" class="h-[auto] w-[333px]">
-        <div class="flex gap-8">
-            <a href="https://github.com/rhodevanwyk" class="rounded-full flex items-center justify-center"><img
-                    src="assets - modern design\GIT-Logo.svg" class="w-[150px] h-[150px] "></a>
-            <a href="https://www.instagram.com/rhhoooddddeeeee/?__pwa=1"
-                class="rounded-full flex items-center justify-center"><img src="assets - modern design\INSTA-Logo.svg"
-                    class="w-[150px] h-[150px] "></a>
-            <a href="https://www.linkedin.com/in/rhod%C3%A9-van-wyk-87b671370"
-                class="rounded-full flex items-center justify-center"><img src="assets - modern design\LINK-Logo.svg"
-                    class="w-[150px] h-[150px] "></a>
+    <footer class="bg-black text-white py-32 flex flex-col items-center gap-12 text-center overflow-hidden">
+        <img src="assets - modern design\Rhode-Logo.png" alt="Rhode Logo" class="h-auto w-[200px] md:w-[333px]">
+        <div class="flex flex-wrap justify-center gap-8">
+            <a href="https://github.com/rhodevanwyk" class="flex items-center justify-center">
+                <img src="assets - modern design\GIT-Logo.svg" class="w-[80px] h-[80px] md:w-[150px] md:h-[150px]">
+            </a>
+            <a href="https://www.instagram.com/rhhoooddddeeeee/?__pwa=1" class="flex items-center justify-center">
+                <img src="assets - modern design\INSTA-Logo.svg" class="w-[80px] h-[80px] md:w-[150px] md:h-[150px]">
+            </a>
+            <a href="https://www.linkedin.com/in/rhod%C3%A9-van-wyk-87b671370" class="flex items-center justify-center">
+                <img src="assets - modern design\LINK-Logo.svg" class="w-[80px] h-[80px] md:w-[150px] md:h-[150px]">
+            </a>
         </div>
-        <p class="font-light text-[24px] text-zinc-600">&copy; 2026 Rhode Van Wyk. All rights reserved.</p>
+        <p class="font-light text-lg md:text-[24px] text-zinc-600 px-4 mt-8">&copy; 2026 Rhode Van Wyk. All rights
+            reserved.</p>
     </footer>
 
     <script>
@@ -197,22 +219,21 @@
                 button.style.transform = 'translate3d(0, -5px, 0)';
                 button.style.filter = 'brightness(1.1)';
             });
-
             button.addEventListener('mouseleave', () => {
                 button.style.transform = 'translate3d(0, 0, 0)';
                 button.style.filter = 'brightness(1)';
             });
+        });
 
-            button.addEventListener('mousedown', () => {
-                button.style.transform = 'translate3d(0, -2px, 0) scale(0.99)';
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                link.style.transform = 'translate3d(0, -2px, 0)';
             });
-
-            button.addEventListener('mouseup', () => {
-                button.style.transform = 'translate3d(0, -5px, 0) scale(1)';
+            link.addEventListener('mouseleave', () => {
+                link.style.transform = 'translate3d(0, 0, 0)';
             });
         });
     </script>
-
 </body>
 
 </html>
