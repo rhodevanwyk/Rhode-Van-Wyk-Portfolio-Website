@@ -1,263 +1,198 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rhode Van Wyk - Portfolio</title>
-    <link rel="icon" type="image/png" href="assets - modern design\FavIcon.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        brandPurple: '#6366F1',
-                    },
-                    borderRadius: {
-                        'pill-box': '100px',
-                    }
-                }
-            }
-        }
-
-        function sendToWhatsApp() {
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            const phoneNumber = "27768519561";
-
-            const text = `*Portfolio Inquiry*%0A%0A` +
-                `*Name:* ${name}%0A` +
-                `*Email:* ${email}%0A` +
-                `*Message:* ${message}`;
-
-            const whatsappURL = `https://wa.me/${phoneNumber}?text=${text}`;
-            window.open(whatsappURL, '_blank').focus();
-        }
-    </script>
-    <style>
-        html,
-        body {
-            max-width: 100%;
-            overflow-x: hidden;
-            background-color: black;
-            margin: 0;
-            padding: 0;
-            border: none;
-        }
-
-        section {
-            border: none !important;
-            outline: none !important;
-        }
-
-        .glass-nav {
-            background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-
-        .btn-premium {
-            will-change: transform, filter;
-            backface-visibility: hidden;
-        }
-
-        .nav-link {
-            display: inline-block;
-            will-change: transform;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rhode Van Wyk | Portfolio</title>
+  <link rel="icon" type="image/png" href="ASSETS\favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-black font-sans antialiased text-black">
+<body>
 
-    <nav class="glass-nav fixed top-0 w-full z-50 text-white px-8 md:px-[64px] py-6 flex justify-between items-center">
-        <img src="assets - modern design\Rhode-Logo.png" class="w-[80px] md:w-[111px] h-auto">
-        <ul class="hidden lg:flex gap-16 text-[33px] font-black uppercase font-sans">
-            <li><a href="#home" class="nav-link transition-all duration-300 hover:text-brandPurple">Home</a></li>
-            <li><a href="#projects" class="nav-link transition-all duration-300 hover:text-brandPurple">Projects</a>
-            </li>
-            <li><a href="#about" class="nav-link transition-all duration-300 hover:text-brandPurple">About</a></li>
-            <li><a href="#skills" class="nav-link transition-all duration-300 hover:text-brandPurple">Skills</a></li>
-            <li><a href="#resume" class="nav-link transition-all duration-300 hover:text-brandPurple">Resume</a></li>
-            <li><a href="#contact" class="nav-link transition-all duration-300 hover:text-brandPurple">Contact</a></li>
-        </ul>
-        <a href="https://github.com/rhodevanwyk" class="hidden md:block"><i
-                class="fab fa-github text-[40px] md:text-[80px]"></i></a>
-    </nav>
-
-    <section id="home"
-        class="relative h-[85vh] mt-[15vh] w-[95%] mx-auto bg-white px-8 md:px-[80px] flex items-center overflow-hidden rounded-t-[50px] md:rounded-t-pill-box">
-
-        <div class="hidden md:flex w-full relative z-10 flex-row items-center justify-start gap-[100px] lg:gap-[300px]">
-            <img src="assets - modern design\Hero-Section-Title.png" alt="Title"
-                class="h-[500px] lg:h-[666px] w-auto object-contain">
-            <img src="assets - modern design\Thing.png" alt="Thing"
-                class="h-[600px] lg:h-[788px] w-auto object-contain">
-        </div>
-
-        <div class="flex md:hidden flex-col w-full relative z-10">
-            <h1 class="font-black text-[55px] text-black uppercase leading-[0.8] mb-2">UI/UX &
-            </h1>
-            <h2 class="font-black text-[55px] text-black uppercase leading-[0.9]">Frontend Developer
-            </h2>
-        </div>
-    </section>
-
-<section id="projects" class="bg-black py-24 px-8">
-    <div class="max-w-[1600px] mx-auto overflow-hidden pt-2 pb-2">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
-            <h2 class="font-black text-white text-5xl md:text-[96px] uppercase">My Projects</h2>
-            
-            <button
-                class="btn-premium bg-brandPurple text-black px-10 h-auto py-6 md:h-[111px] md:py-0 rounded-full font-bold text-xl md:text-[48px] w-full md:w-[500px] uppercase transition-all duration-500 flex items-center justify-center">
-                See More...
-            </button>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[40px] md:gap-[50px]">
-            <div class="aspect-[4/5] bg-white rounded-[40px] md:rounded-pill-box overflow-hidden">
-                <img src="assets/project1.jpg" alt="Project 1" class="w-full h-full object-cover">
-            </div>
-            <div class="aspect-[4/5] bg-white rounded-[40px] md:rounded-pill-box overflow-hidden">
-                <img src="assets/project2.jpg" alt="Project 2" class="w-full h-full object-cover">
-            </div>
-            <div class="aspect-[4/5] bg-white rounded-[40px] md:rounded-pill-box overflow-hidden">
-                <img src="assets/project3.jpg" alt="Project 3" class="w-full h-full object-cover">
-            </div>
-        </div>
+  <nav class="border-b">
+    <div class="brand-name">RHODE VAN WYK</div>
+    <div class="nav-links">
+      <a href="#about">ABOUT</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#stack">SKILLS</a>
+      <a href="#contact">CONTACT ME</a>
     </div>
-</section>
+  </nav>
 
-    <section class="bg-white py-24 px-8 overflow-hidden">
-        <div class="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0">
+  <header class="hero-grid border-b">
+    <div class="hero-text-area">
+      <h1 class="headline">WEB DESIGNER<br>& DEVELOPER</h1>
+      <p class="sub-headline">Based in South-Africa, Pretoria-East.<br>ALSOOO...I crafted the logo you see on the right.
+        (I used GIMP)</p>
+    </div>
+    <div class="hero-image-area">
+      <img src="ASSETS/rhodelogo.png" alt="Hero Image" class="hero-img">
+    </div>
+  </header>
 
-            <div id="about"
-                class="bg-brandPurple text-white p-12 md:p-[80px] rounded-[50px] lg:rounded-pill-box lg:rounded-br-none flex flex-col justify-center min-h-[450px] lg:h-[881px]">
-                <h3 class="font-black text-5xl md:text-[96px] mb-8 uppercase leading-none">About Me</h3>
-                <p class="text-2xl md:text-[33px] leading-tight md:leading-[48px] max-w-xl text-white">
-                    I’m a <b>Front-End Developer</b> & <b>UI/UX Designer</b> who builds clean, fast, and intuitive
-                    websites.
-                </p>
-            </div>
+  <section id="about" class="section-padding border-b">
+    <div class="grid-2">
+      <h2 class="section-title">ABOUT ME</h2>
+      <div class="content-block">
+        <p class="large-text">I am a UI/UX Web Designer focused on creating unique & creaitve designs. <br><br> My
+          approach combines technical precision with a minimalistic but chaotic aesthetic to build interfaces that are
+          as functional as they are bold. <br><br> I really like experimenting and getting as creative as my physical
+          vessel allows. Some of my designs MIGHT seem a bit too much, but that's what attacts the eye isn't it? I
+          mainly work in Figma, but I am skilled in more design software.<br><br> P.S.<br>I can keep it classy but I
+          like keeping it 'anders'.</p>
+      </div>
+    </div>
+  </section>
 
-            <div id="skills"
-                class="bg-black text-white p-12 md:p-[80px] rounded-[50px] lg:rounded-pill-box lg:rounded-bl-none flex flex-col justify-center min-h-[450px]">
-                <h3 class="font-black text-5xl md:text-[96px] mb-16 uppercase leading-none">Skills</h3>
-                <div class="w-full">
-                    <img src="assets - modern design\Skills-Icons.png" alt="Skills Icons"
-                        class="max-w-full h-auto object-contain">
-                </div>
-            </div>
+  <main id="projects">
+    <div class="section-header border-b">
+      <h2 class="section-title padding-x">PROJECTS</h2>
+    </div>
 
-            <div id="resume"
-                class="bg-black text-white p-12 md:p-[80px] rounded-[50px] lg:rounded-pill-box lg:rounded-tr-none flex flex-col justify-center items-start min-h-[450px] lg:h-[881px]">
-
-                <div class="w-full text-left">
-                    <h3 class="font-black text-5xl md:text-[96px] mb-8 uppercase text-white leading-none">My Resume</h3>
-                    <p class="text-white opacity-40 text-xl md:text-[33px]">Available for freelance & full-time work.
-                    </p>
-                </div>
-
-                <a href="rhodevanwyk-resume.pdf" download="Rhode_Van_Wyk_Resume.pdf"
-                    class="btn-premium mt-12 md:mt-36 bg-white text-black px-8 py-6 rounded-full font-bold text-xl md:text-[48px] w-full lg:w-[500px] lg:h-[111px] uppercase flex items-center justify-center transition-all duration-500 mx-auto">
-                    Download PDF
-                </a>
-            </div>
+    <div class="projects-container">
+      <article class="project-row border-b">
+        <div class="project-content">
+          <span class="category">LANDING PAGE UI/UX DESIGN</span>
+          <h3 class="project-name">LOGHO: A Brutalist Architectural Landing Page</h3>
+          <div class="stack-tags"><span>FIGMA</span><span>UI/UX</span><span>PROTOTYPING</span><span>LOGO
+              DESIGN</span><span>AUTO LAYOUT</span></div>
         </div>
-    </section>
-
-    <section id="contact" class="bg-black py-24 px-4 md:px-8 overflow-hidden">
-        <div
-            class="max-w-[1600px] mx-auto bg-white rounded-[50px] md:rounded-pill-box p-12 md:p-[80px] grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-            <div>
-                <h2 class="font-black text-6xl md:text-[96px] uppercase leading-none mb-8 text-black">Contact<br>Me
-                </h2>
-                <p class="text-2xl md:text-[33px] leading-tight md:leading-[48px] max-w-xl text-black">
-                    Have a project in mind or just want to say hi? My inbox is <b>always</b> open.
-                </p>
-            </div>
-
-            <form class="space-y-6" onsubmit="event.preventDefault(); sendToWhatsApp();">
-
-                <div class="flex flex-col gap-2">
-                    <label class="font-black text-2xl md:text-[33px] uppercase text-black">Full Name</label>
-                    <input id="name" type="text" placeholder="Name Surname"
-                        class="w-full bg-black p-6 text-xl text-white font-bold outline-none border-none placeholder:opacity-30"
-                        required>
-                </div>
-
-                <div class="flex flex-col gap-2">
-                    <label class="font-black text-2xl md:text-[33px] uppercase text-black">Email</label>
-                    <input id="email" type="email" placeholder="name@example.com"
-                        class="w-full bg-black p-6 text-xl text-white font-bold outline-none border-none placeholder:opacity-30"
-                        required>
-                </div>
-
-                <div class="flex flex-col gap-2">
-                    <label class="font-black text-2xl md:text-[33px] uppercase text-black">Message</label>
-                    <textarea id="message" rows="4" placeholder="Tell me all about your project here..."
-                        class="w-full bg-black p-6 text-xl text-white font-bold resize-none outline-none border-none placeholder:opacity-30"
-                        required></textarea>
-                </div>
-
-                <button type="submit"
-                    class="btn-premium w-full bg-brandPurple text-black px-10 h-auto py-6 md:h-[111px] md:py-0 rounded-full font-black text-2xl md:text-[48px] uppercase transition-all duration-500 mt-4 flex items-center justify-center">
-                    Send
-                </button>
-            </form>
+        <div class="project-visual">
+          <iframe src="https://www.behance.net/embed/project/246718775?ilo0=1" class="project-iframe" allowfullscreen
+            lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin">
+          </iframe>
         </div>
-    </section>
+      </article>
 
-    <footer class="bg-black text-white py-32 flex flex-col items-center gap-12 text-center overflow-hidden">
-        <img src="assets - modern design\Rhode-Logo.png" alt="Rhode Logo" class="h-auto w-[200px] md:w-[333px]">
-        <div class="flex flex-wrap justify-center gap-8">
-            <a href="https://github.com/rhodevanwyk" class="flex items-center justify-center">
-                <img src="assets - modern design\GIT-Logo.svg" class="w-[80px] h-[80px] md:w-[150px] md:h-[150px]">
-            </a>
-            <a href="https://www.instagram.com/rhhoooddddeeeee/?__pwa=1" class="flex items-center justify-center">
-                <img src="assets - modern design\INSTA-Logo.svg" class="w-[80px] h-[80px] md:w-[150px] md:h-[150px]">
-            </a>
-            <a href="https://www.linkedin.com/in/rhod%C3%A9-van-wyk-87b671370" class="flex items-center justify-center">
-                <img src="assets - modern design\LINK-Logo.svg" class="w-[80px] h-[80px] md:w-[150px] md:h-[150px]">
-            </a>
+      <article class="project-row border-b">
+        <div class="project-content">
+          <span class="category">LANDING PAGE UI/UX DESIGN</span>
+          <h3 class="project-name">SaaS Branding & Landing Page Design: NOCTRA</h3>
+          <div class="stack-tags"><span>FIGMA</span><span>UI/UX</span><span>PROTOTYPING</span><span>LOGO
+              DESIGN</span><span>AUTO LAYOUT</span></div>
         </div>
-        <p class="font-light text-lg md:text-[24px] text-zinc-600 px-4 mt-8">&copy; 2026 Rhode Van Wyk. All rights
-            reserved.</p>
-    </footer>
+        <div class="project-visual">
+          <iframe src="https://www.behance.net/embed/project/246058995?ilo0=1" class="project-iframe" allowfullscreen
+            lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin">
+          </iframe>
+        </div>
+      </article>
 
-    <script>
-        document.querySelectorAll('.btn-premium').forEach(button => {
-            button.addEventListener('mouseenter', () => {
-                button.style.transform = 'translate3d(0, -5px, 0)';
-                button.style.filter = 'brightness(1.1)';
-            });
-            button.addEventListener('mouseleave', () => {
-                button.style.transform = 'translate3d(0, 0, 0)';
-                button.style.filter = 'brightness(1)';
-            });
-        });
+      <article class="project-row border-b">
+        <div class="project-content">
+          <span class="category">LANDING PAGE UI/UX DESIGN</span>
+          <h3 class="project-name">Brutalist SaaS Landing Page & Logo Design | SLAB</h3>
+          <div class="stack-tags"><span>FIGMA</span><span>UI/UX</span><span>PROTOTYPING</span><span>LOGO
+              DESIGN</span><span>AUTO LAYOUT</span></div>
+        </div>
+        <div class="project-visual">
+          <iframe src="https://www.behance.net/embed/project/246058773?ilo0=1" class="project-iframe" allowfullscreen
+            lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin">
+          </iframe>
+        </div>
+      </article>
 
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('mouseenter', () => {
-                link.style.transform = 'translate3d(0, -2px, 0)';
-            });
-            link.addEventListener('mouseleave', () => {
-                link.style.transform = 'translate3d(0, 0, 0)';
-            });
-        });
-    </script>
+      <article class="project-row border-b">
+        <div class="project-content">
+          <span class="category">SOCIAL PLATFORM / INDUSTRIAL DESIGN</span>
+          <h3 class="project-name">Landing Page & Logo Design | LVLUP</h3>
+          <div class="stack-tags"><span>FIGMA</span><span>UI/UX</span><span>PROTOTYPING</span><span>LOGO
+              DESIGN</span><span>AUTO LAYOUT</span></div>
+        </div>
+        <div class="project-visual">
+          <iframe src="https://www.behance.net/embed/project/246058573?ilo0=1" class="project-iframe" allowfullscreen
+            lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin">
+          </iframe>
+        </div>
+      </article>
+
+      <article class="project-row border-b">
+        <div class="project-content">
+          <span class="category">HEALTH & FITNESS / TECH</span>
+          <h3 class="project-name">SaaS Branding & Landing Page | Aura.io</h3>
+          <div class="stack-tags"><span>FIGMA</span><span>UI/UX</span><span>PROTOTYPING</span><span>LOGO
+              DESIGN</span><span>AUTO LAYOUT</span></div>
+        </div>
+        <div class="project-visual">
+          <iframe src="https://www.behance.net/embed/project/246059155?ilo0=1" class="project-iframe" allowfullscreen
+            lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin">
+          </iframe>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <section id="stack" class="section-padding border-b">
+    <div class="grid-2">
+      <h2 class="section-title">SKILLS</h2>
+      <div class="skills-wrapper">
+        <div class="skill-group">
+          <h4 class="group-label">DESIGN</h4>
+          <div class="stack-tags">
+            <span>FIGMA</span>
+            <span>AUTO LAYOUT</span>
+            <span>DESIGN SYSTEMS</span>
+            <span>UI/UX</span>
+            <span>CANVA</span>
+            <span>GIMP</span>
+            <span>ADOBE ILLUSTRATOR</span>
+            <span>RESPONSIVE DESIGN</span>
+            <span>WEBFLOW</span>
+            <span>WIX</span>
+            <span>INKSCAPE</span>
+          </div>
+        </div>
+
+        <div class="skill-group" style="margin-top: 64px;">
+          <h4 class="group-label">DEVELOPMENT</h4>
+          <div class="stack-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JAVASCRIPT</span>
+            <span>TAILWIND CSS</span>
+            <span>PHP</span>
+            <span>GITHUB</span>
+            <span>VSCODE</span>
+            <span>BOOTSTRAP CSS</span>
+            <span>BROWSER DEVTOOLS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section-padding border-b">
+    <div class="grid-2">
+      <h2 class="section-title">CONNECT</h2>
+      <div class="contact-box">
+        <a href="mailto:vanwykrhode30@gmail.com" class="email-link">VANWYKRHODE30@GMAIL.COM</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="social-container border-b">
+      <a href="#" class="social-link brand-fiverr">FIVERR</a>
+      <a href="#" class="social-link brand-upwork">UPWORK</a>
+      <a href="#" class="social-link brand-behance">BEHANCE</a>
+      <a href="#" class="social-link brand-dribbble">DRIBBBLE</a>
+      <a href="#" class="social-link brand-linkedin">LINKEDIN</a>
+      <a href="#" class="social-link brand-instagram">INSTAGRAM</a>
+      <a href="#" class="social-link brand-facebook">FACEBOOK</a>
+      <a href="#" class="social-link brand-facebook">GITHUB</a>
+    </div>
+    <div class="footer-bottom">
+      <span>RHODE VAN WYK &copy; 2026</span>
+      <span>BUILT WITH PURE CODE</span>
+    </div>
+  </footer>
+
 </body>
 
 </html>
